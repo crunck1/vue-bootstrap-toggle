@@ -52,7 +52,7 @@ export default {
     if (this.disabled) { this.$$el.bootstrapToggle('disable') }
     this.$$el.change(() => {
       this.updating = true;
-      this.$emit('input', this.$$el.prop('checked'));
+      this.$emit('input', this.$$el);
       this.$nextTick( () => this.updating = false );
     })
   },
